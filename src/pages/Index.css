@@ -1,0 +1,168 @@
+.index{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:40px 22px 120px;
+
+    background:url("../assets/diary-bg.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+}
+
+/* ---------- HEADER ---------- */
+
+.header{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.header h1{
+
+    color:#231942;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:12px;
+
+}
+
+.header p{
+
+    color:#756E8A;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+/* ---------- INDEX ---------- */
+
+.index-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:26px;
+
+}
+
+/* ---------- ROW ---------- */
+
+.index-row{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    cursor:pointer;
+
+}
+
+/* ---------- NUMBER ---------- */
+
+.sr{
+
+    width:40px;
+
+    color:#231942;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+/* ---------- TITLE ---------- */
+
+.title{
+
+    color:#231942;
+
+    font-size:16px;
+
+    white-space:nowrap;
+
+}
+
+/* ---------- DOTS ---------- */
+
+.dots{
+
+    flex:1;
+
+    margin:0 10px 5px;
+
+    border-bottom:2px dotted rgba(35,25,66,.45);
+
+}
+
+/* ---------- DATE ---------- */
+
+.date{
+
+    color:#5F5875;
+
+    font-size:15px;
+
+    white-space:nowrap;
+
+}
+
+/* ---------- BUTTON ---------- */
+
+.new-btn{
+
+    position:fixed;
+
+    right:22px;
+
+    bottom:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:15px 24px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#231942;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 25px rgba(35,25,66,.18);
+
+}
+
+.new-btn svg{
+
+    font-size:14px;
+
+}
+
+::-webkit-scrollbar{
+
+    display:none;
+
+}

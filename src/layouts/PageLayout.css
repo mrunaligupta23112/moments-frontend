@@ -1,0 +1,70 @@
+.page{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:24px;
+
+    position:relative;
+
+    background-image:url("../assets/diary-bg.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+}
+
+.layout-back-btn{
+
+    position:absolute;
+
+    top:24px;
+
+    left:24px;
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.82);
+
+    color:#231942;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+.card{
+
+    width:100%;
+    max-width:420px;
+
+    padding:0;
+
+}
+.layout-left-content{
+
+    position:absolute;
+
+    top:78px;
+
+    left:24px;
+
+}

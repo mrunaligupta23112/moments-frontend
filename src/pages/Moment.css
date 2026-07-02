@@ -2,8 +2,6 @@
 
     width:100%;
 
-    position:relative;
-
 }
 
 /* ---------- TOP ---------- */
@@ -18,11 +16,19 @@
 
     margin-top:8px;
 
-    margin-bottom:34px;
+    margin-bottom:32px;
 
 }
 
-/* ---------- MENU BUTTON ---------- */
+/* ---------- MENU ---------- */
+
+.menu-wrapper{
+
+    position:relative;
+
+    display:inline-block;
+
+}
 
 .menu-btn{
 
@@ -62,23 +68,21 @@
 
 }
 
-/* ---------- MENU ---------- */
-
 .menu{
 
     position:absolute;
 
-    top:52px;
+    top:46px;
 
     left:0;
 
-    width:195px;
+    width:190px;
 
     background:#ffffff;
 
     border:1px solid rgba(35,25,66,.08);
 
-    border-radius:18px;
+    border-radius:16px;
 
     overflow:hidden;
 
@@ -102,7 +106,7 @@
 
     border:none;
 
-    background:transparent;
+    background:#ffffff;
 
     color:#231942;
 
@@ -116,9 +120,15 @@
 
 }
 
-.menu button:active{
+.menu button:hover{
 
     background:#F7F5FC;
+
+}
+
+.menu button:active{
+
+    background:#EEE9F8;
 
 }
 
@@ -154,7 +164,7 @@
 
     font-weight:700;
 
-    line-height:1.45;
+    line-height:1.4;
 
     margin-bottom:28px;
 
@@ -168,7 +178,7 @@
 
     font-size:16px;
 
-    line-height:2.1;
+    line-height:2;
 
 }
 

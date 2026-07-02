@@ -14,7 +14,7 @@ function Splash() {
 
             navigate("/login");
 
-        }, 5000);
+        }, 1500);
 
         return () => clearTimeout(timer);
 

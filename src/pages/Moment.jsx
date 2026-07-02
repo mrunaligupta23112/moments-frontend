@@ -23,17 +23,45 @@ function Moment() {
 
             leftAction={
 
-                <button
+                <div className="menu-wrapper">
 
-                    className="menu-btn"
+                    <button
 
-                    onClick={() => setMenuOpen(!menuOpen)}
+                        className="menu-btn"
 
-                >
+                        onClick={() => setMenuOpen(!menuOpen)}
 
-                    <FaEllipsisV />
+                    >
 
-                </button>
+                        <FaEllipsisV/>
+
+                    </button>
+
+                    {
+
+                        menuOpen && (
+
+                            <div className="menu">
+
+                                <button
+
+                                    onClick={() => navigate("/edit-moment")}
+
+                                >
+
+                                    <FaEdit/>
+
+                                    <span>Edit Moment</span>
+
+                                </button>
+
+                            </div>
+
+                        )
+
+                    }
+
+                </div>
 
             }
 
@@ -50,28 +78,6 @@ function Moment() {
                     </span>
 
                 </div>
-
-                {
-
-                    menuOpen &&
-
-                    <div className="menu">
-
-                        <button
-
-                            onClick={() => navigate("/edit-moment")}
-
-                        >
-
-                            <FaEdit />
-
-                            <span>Edit Moment</span>
-
-                        </button>
-
-                    </div>
-
-                }
 
                 <h1>
 

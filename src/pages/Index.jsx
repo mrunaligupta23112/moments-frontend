@@ -32,7 +32,13 @@ function Index() {
 
     return(
 
-        <PageLayout centered={false}>
+        <PageLayout
+
+    centered={false}
+
+    showBack={false}
+
+>
 
             <div className="index">
 

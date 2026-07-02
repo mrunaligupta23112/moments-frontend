@@ -1,10 +1,14 @@
-.new-moment{
+.NewMoment{
 
     width:100%;
 
+    display:flex;
+
+    flex-direction:column;
+
 }
 
-/* ---------- TOP BAR ---------- */
+/* ---------- TOP ---------- */
 
 .top-bar{
 
@@ -14,7 +18,7 @@
 
     align-items:center;
 
-    margin-bottom:36px;
+    margin-bottom:20px;
 
 }
 
@@ -22,7 +26,9 @@
 
 .date-input{
 
-    width:140px;
+    width:150px;
+
+    padding:6px 0;
 
     border:none;
 
@@ -30,49 +36,47 @@
 
     background:transparent;
 
-    color:#231942;
+    color:#6F6885;
 
-    font-size:15px;
+    font-size:14px;
 
     font-weight:600;
 
     text-align:right;
 
-    padding-bottom:4px;
-
 }
 
 .date-input::placeholder{
 
-    color:#8A849C;
-
-    letter-spacing:2px;
+    color:#938BA7;
 
 }
 
 /* ---------- HEADING ---------- */
 
-.new-moment h1{
+.NewMoment h1{
 
     color:#231942;
 
-    font-size:32px;
+    font-size:30px;
 
     font-weight:700;
 
-    margin-bottom:38px;
+    margin-bottom:24px;
 
 }
 
 /* ---------- LABEL ---------- */
 
-.new-moment label{
+.NewMoment label{
 
     display:block;
 
     color:#756E8A;
 
     font-size:14px;
+
+    font-weight:500;
 
     margin-bottom:10px;
 
@@ -84,15 +88,15 @@
 
     width:100%;
 
+    padding:12px 0;
+
+    margin-bottom:22px;
+
     border:none;
 
-    border-bottom:2px solid rgba(35,25,66,.15);
+    border-bottom:2px solid rgba(35,25,66,.12);
 
     background:transparent;
-
-    padding:14px 0;
-
-    margin-bottom:34px;
 
     color:#231942;
 
@@ -102,11 +106,13 @@
 
     outline:none;
 
+    transition:.25s;
+
 }
 
-.title-input::placeholder{
+.title-input:focus{
 
-    color:#AAA2BB;
+    border-bottom-color:#231942;
 
 }
 
@@ -116,25 +122,39 @@
 
     width:100%;
 
-    min-height:340px;
+    height:32vh;
+
+    min-height:180px;
+
+    max-height:34vh;
+
+    padding:12px 0;
 
     border:none;
+
+    border-bottom:2px solid rgba(35,25,66,.12);
+
+    background:transparent;
 
     outline:none;
 
     resize:none;
 
-    background:transparent;
+    overflow-y:auto;
 
-    border-bottom:2px solid rgba(35,25,66,.15);
-
-    padding:14px 0;
-
-    color:#231942;
+    color:#4A465A;
 
     font-size:16px;
 
-    line-height:2;
+    line-height:1.8;
+
+    transition:.25s;
+
+}
+
+.description:focus{
+
+    border-bottom-color:#231942;
 
 }
 
@@ -150,20 +170,36 @@
 
     width:100%;
 
-    height:58px;
+    height:56px;
 
-    margin-top:40px;
+    margin-top:24px;
 
     border:none;
 
-    border-radius:16px;
+    border-radius:18px;
 
     background:#231942;
 
-    color:white;
+    color:#ffffff;
 
     font-size:16px;
 
     font-weight:600;
+
+    box-shadow:0 12px 24px rgba(35,25,66,.15);
+
+    transition:.25s;
+
+}
+
+.save-btn:active{
+
+    transform:scale(.98);
+
+}
+
+::-webkit-scrollbar{
+
+    display:none;
 
 }

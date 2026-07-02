@@ -1,4 +1,6 @@
 import "./Index.css";
+import PageLayout from "../layouts/PageLayout";
+
 import { FaPlus } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -30,80 +32,87 @@ function Index() {
 
     return(
 
-        <div className="index">
+        <PageLayout centered={false}>
 
-            <header className="header">
+            <div className="index">
 
-                <h1>Moments</h1>
+                <header className="header">
 
-                <p>
-                    The Important Moments
-                    <br/>
-                    of My Life
-                </p>
+                    <h1>Moments</h1>
 
-            </header>
+                    <p>
 
-            <section className="index-list">
+                        The Important Moments
 
-                {
+                        <br/>
 
-                    moments.map((moment)=>(
+                        of My Life
 
-                        <div
+                    </p>
 
-                            key={moment.id}
+                </header>
 
-                            className="index-row"
+                <section className="index-list">
 
-                            onClick={()=>navigate("/moment")}
+                    {
 
-                        >
+                        moments.map((moment)=>(
 
-                            <span className="sr">
+                            <div
 
-                                {String(moment.id).padStart(2,"0")}.
+                                key={moment.id}
 
-                            </span>
+                                className="index-row"
 
-                            <span className="title">
+                                onClick={()=>navigate("/moment")}
 
-                                {moment.title}
+                            >
 
-                            </span>
+                                <span className="sr">
 
-                            <span className="dots"></span>
+                                    {String(moment.id).padStart(2,"0")}.
 
-                            <span className="date">
+                                </span>
 
-                                {moment.date}
+                                <span className="title">
 
-                            </span>
+                                    {moment.title}
 
-                        </div>
+                                </span>
 
-                    ))
+                                <span className="dots"></span>
 
-                }
+                                <span className="date">
 
-            </section>
+                                    {moment.date}
 
-            <button
+                                </span>
 
-                className="new-btn"
+                            </div>
 
-                onClick={()=>
-                navigate("/NewMoment")
-}
-            >
+                        ))
 
-                <FaPlus/>
+                    }
 
-                <span>New moment</span>
+                </section>
 
-            </button>
+                <button
 
-        </div>
+                    className="new-btn"
+
+                    onClick={()=>navigate("/NewMoment")}
+
+                >
+
+                    <FaPlus/>
+
+                    <span>New Moment</span>
+
+                </button>
+
+            </div>
+
+        </PageLayout>
 
     );
 

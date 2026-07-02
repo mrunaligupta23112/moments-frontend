@@ -4,97 +4,135 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import {
-  FaUser,
-  FaLock,
-  FaEye,
-  FaEyeSlash
+    FaUser,
+    FaLock,
+    FaEye,
+    FaEyeSlash
 } from "react-icons/fa";
 
 function Login() {
 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const [showPassword, setShowPassword] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
-  return (
+    return (
 
-    <PageLayout showBack={false}>
+        <PageLayout showBack={false}>
 
-      <div className="login">
+            <div className="login">
 
-        <h1>Welcome Back</h1>
+                <h1>Welcome Back</h1>
 
-        <p>Sign in to continue your journey.</p>
+                <p>
 
-        <div className="input-box">
+                    Sign in to continue your journey.
 
-          <FaUser className="icon" />
+                </p>
 
-          <input
-            type="text"
-            placeholder="Username or Mobile Number"
-          />
+                <div className="input-box">
 
-        </div>
+                    <FaUser className="icon"/>
 
-        <div className="input-box">
+                    <input
 
-          <FaLock className="icon" />
+                        type="text"
 
-          <input
-            type={showPassword ? "text" : "password"}
-            placeholder="Password"
-          />
+                        placeholder="Username or Mobile Number"
 
-          <button
-            className="eye-btn"
-            onClick={() => setShowPassword(!showPassword)}
-          >
-            {showPassword ? <FaEyeSlash /> : <FaEye />}
-          </button>
+                    />
 
-        </div>
+                </div>
 
-        <button
-          className="continue-btn"
-          onClick={() => navigate("/password")}
-        >
-          Continue
-        </button>
-<button
+                <div className="input-box">
 
-    className="forgot-btn"
+                    <FaLock className="icon"/>
 
-    onClick={() => navigate("/forgot-password")}
+                    <input
 
->
+                        type={showPassword ? "text" : "password"}
 
-    Forgot Password?
+                        placeholder="Password"
 
-</button>
+                    />
 
-        <div className="divider">
-          <span></span>
-          <p>or</p>
-          <span></span>
-        </div>
-<button
+                    <button
 
-    className="signup-btn"
+                        type="button"
 
-    onClick={() => navigate("/signup")}
+                        className="eye-btn"
 
->
+                        onClick={() => setShowPassword(!showPassword)}
 
-    Create New Account
+                    >
 
-</button>
+                        {
 
-      </div>
+                            showPassword ?
 
-    </PageLayout>
+                            <FaEyeSlash/>
 
-  );
+                            :
+
+                            <FaEye/>
+
+                        }
+
+                    </button>
+
+                </div>
+
+                <button
+
+                    className="continue-btn"
+
+                    onClick={() => navigate("/password")}
+
+                >
+
+                    Continue
+
+                </button>
+
+                <button
+
+                    className="forgot-btn"
+
+                    onClick={() => navigate("/forgot-password")}
+
+                >
+
+                    Forgot Password?
+
+                </button>
+
+                <div className="divider">
+
+                    <span></span>
+
+                    <p>or</p>
+
+                    <span></span>
+
+                </div>
+
+                <button
+
+                    className="signup-btn"
+
+                    onClick={() => navigate("/signup")}
+
+                >
+
+                    Create New Account
+
+                </button>
+
+            </div>
+
+        </PageLayout>
+
+    );
 
 }
 

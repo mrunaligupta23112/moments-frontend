@@ -8,7 +8,7 @@ function NewMoment() {
 
     return (
 
-        <PageLayout>
+        <PageLayout centered={false}>
 
             <div className="new-moment">
 
@@ -20,7 +20,7 @@ function NewMoment() {
 
                         className="date-input"
 
-                        placeholder="______________"
+                        placeholder="23 Jul 2026"
 
                     />
 

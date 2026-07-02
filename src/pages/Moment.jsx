@@ -17,31 +17,31 @@ function Moment() {
 
     return (
 
-        
         <PageLayout
 
-    leftAction={
+            centered={false}
 
-        <button
+            leftAction={
 
-            className="menu-btn"
+                <button
 
-            onClick={() => setMenuOpen(!menuOpen)}
+                    className="menu-btn"
+
+                    onClick={() => setMenuOpen(!menuOpen)}
+
+                >
+
+                    <FaEllipsisV />
+
+                </button>
+
+            }
 
         >
-
-            <FaEllipsisV />
-
-        </button>
-
-    }
-
->
 
             <div className="moment">
 
                 <div className="top-bar">
-
 
                     <span className="date">
 
@@ -87,7 +87,7 @@ function Moment() {
 
                     </p>
 
-                    <br />
+                    <br/>
 
                     <p>
 
@@ -95,7 +95,7 @@ function Moment() {
 
                     </p>
 
-                    <br />
+                    <br/>
 
                     <p>
 

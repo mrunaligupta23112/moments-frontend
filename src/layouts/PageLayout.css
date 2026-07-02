@@ -2,69 +2,137 @@
 
     width:100%;
     min-height:100vh;
+    min-height:100dvh;
 
     display:flex;
 
     justify-content:center;
-    align-items:center;
-
-    padding:24px;
 
     position:relative;
+
+    padding:24px 20px;
+
+    overflow-x:hidden;
 
     background-image:url("../assets/diary-bg.png");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-    background-attachment:fixed;
 
 }
 
+.page-center{
+
+    align-items:center;
+
+}
+
+.page-top{
+
+    align-items:flex-start;
+
+    padding-top:96px;
+
+}
+
+/* ---------- CARD ---------- */
+
+.card{
+
+    width:100%;
+
+    max-width:420px;
+
+    margin:0 auto;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ---------- BACK BUTTON ---------- */
+
 .layout-back-btn{
 
-    position:absolute;
+    position:fixed;
 
-    top:24px;
+    top:calc(env(safe-area-inset-top) + 18px);
 
-    left:24px;
+    left:20px;
 
-    width:42px;
+    width:44px;
 
-    height:42px;
+    height:44px;
 
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
     border:none;
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.82);
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    box-shadow:0 8px 22px rgba(35,25,66,.10);
 
     color:#231942;
 
     font-size:16px;
 
-    cursor:pointer;
+    z-index:999;
+
+    transition:.25s;
 
 }
 
-.card{
+.layout-back-btn:active{
 
-    width:100%;
-    max-width:420px;
-
-    padding:0;
+    transform:scale(.95);
 
 }
-.layout-left-content{
 
-    position:absolute;
+/* ---------- LEFT ACTION ---------- */
 
-    top:78px;
+.layout-left-action{
 
-    left:24px;
+    position:fixed;
+
+    top:calc(env(safe-area-inset-top) + 72px);
+
+    left:20px;
+
+    z-index:999;
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width:420px){
+
+    .page{
+
+        padding-left:18px;
+
+        padding-right:18px;
+
+    }
+
+}
+
+@media (min-width:768px){
+
+    .card{
+
+        max-width:430px;
+
+    }
 
 }

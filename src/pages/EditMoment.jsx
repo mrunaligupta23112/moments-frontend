@@ -8,7 +8,7 @@ function EditMoment() {
 
     return (
 
-        <PageLayout>
+        <PageLayout centered={false}>
 
             <div className="edit-moment">
 

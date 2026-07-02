@@ -26,16 +26,18 @@ function Splash() {
 
             <div className="splash">
 
-                
-
                 <div className="overlay">
 
                     <h1>Moments</h1>
 
                     <p>
+
                         Every moment deserves
-                        <br />
+
+                        <br/>
+
                         to be remembered.
+
                     </p>
 
                 </div>

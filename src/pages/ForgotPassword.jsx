@@ -98,159 +98,164 @@ function ForgotPassword() {
                     )
 
                 }
+
                 {
 
-    step===2 && (
+                    step===2 && (
 
-        <>
+                        <>
 
-            <h1>Verify Account</h1>
+                            <h1>Verify Account</h1>
 
-            <p>
+                            <p>
 
-                Enter the verification code sent
-                to your mobile number or email.
+                                Enter the verification code sent
+                                to your mobile number or email.
 
-            </p>
+                            </p>
 
-            <label>
+                            <label>
 
-                Verification Code
+                                Verification Code
 
-            </label>
+                            </label>
 
-            <div className="otp-container">
+                            <div className="otp-container">
 
-                {[0,1,2,3,4,5].map((i)=>(
+                                {
 
-                    <input
+                                    [0,1,2,3,4,5].map((i)=>(
 
-                        key={i}
+                                        <input
 
-                        ref={(el)=>otpRefs.current[i]=el}
+                                            key={i}
 
-                        className="otp-box"
+                                            ref={(el)=>otpRefs.current[i]=el}
 
-                        type="text"
+                                            className="otp-box"
 
-                        inputMode="numeric"
+                                            type="text"
 
-                        maxLength="1"
+                                            inputMode="numeric"
 
-                        onChange={(e)=>handleOtpChange(e,i)}
+                                            maxLength="1"
 
-                        onKeyDown={(e)=>handleOtpKeyDown(e,i)}
+                                            onChange={(e)=>handleOtpChange(e,i)}
 
-                    />
+                                            onKeyDown={(e)=>handleOtpKeyDown(e,i)}
 
-                ))}
+                                        />
+
+                                    ))
+
+                                }
+
+                            </div>
+
+                            <p className="otp-text">
+
+                                Didn't receive the verification code?
+
+                            </p>
+
+                            <button
+
+                                className="resend-btn"
+
+                            >
+
+                                Resend Code
+
+                            </button>
+
+                            <button
+
+                                className="forgot-btn"
+
+                                onClick={()=>setStep(3)}
+
+                            >
+
+                                Verify
+
+                            </button>
+
+                        </>
+
+                    )
+
+                }
+
+                {
+
+                    step===3 && (
+
+                        <>
+
+                            <h1>Create New Password</h1>
+
+                            <p>
+
+                                Choose a new password for
+                                your account.
+
+                            </p>
+
+                            <label>
+
+                                New Password
+
+                            </label>
+
+                            <input
+
+                                className="forgot-input"
+
+                                type="password"
+
+                                placeholder="Enter New Password"
+
+                            />
+
+                            <label>
+
+                                Confirm Password
+
+                            </label>
+
+                            <input
+
+                                className="forgot-input"
+
+                                type="password"
+
+                                placeholder="Re-enter Password"
+
+                            />
+
+                            <button
+
+                                className="forgot-btn"
+
+                                onClick={() => {
+
+    navigate("/login");
+
+}}
+
+                            >
+
+                                Update Password
+
+                            </button>
+
+                        </>
+
+                    )
+
+                }
 
             </div>
-
-            <p className="otp-text">
-
-                Didn't receive the verification code?
-
-            </p>
-
-            <button
-
-                className="resend-btn"
-
-            >
-
-                Resend Code
-
-            </button>
-
-            <button
-
-                className="forgot-btn"
-
-                onClick={()=>setStep(3)}
-
-            >
-
-                Verify
-
-            </button>
-
-        </>
-
-    )
-
-}
-
-{
-
-    step===3 && (
-
-        <>
-
-            <h1>Create New Password</h1>
-
-            <p>
-
-                Choose a new password for
-                your account.
-
-            </p>
-
-            <label>
-
-                New Password
-
-            </label>
-
-            <input
-
-                className="forgot-input"
-
-                type="password"
-
-                placeholder="Enter New Password"
-
-            />
-
-            <label>
-
-                Confirm Password
-
-            </label>
-
-            <input
-
-                className="forgot-input"
-
-                type="password"
-
-                placeholder="Re-enter Password"
-
-            />
-
-            <button
-
-                className="forgot-btn"
-
-                onClick={() => {
-
-                    alert("Password Updated Successfully");
-
-                    navigate("/login");
-
-                }}
-
-            >
-
-                Update Password
-
-            </button>
-
-        </>
-
-    )
-
-}             </div>
 
         </PageLayout>
 

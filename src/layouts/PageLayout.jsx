@@ -6,7 +6,8 @@ function PageLayout({
 
     children,
     showBack = true,
-    leftAction = null
+    leftAction = null,
+    centered = true
 
 }) {
 
@@ -14,35 +15,43 @@ function PageLayout({
 
     return (
 
-        <div className="page">
+        <div
+            className={`page ${
+                centered ? "page-center" : "page-top"
+            }`}
+        >
 
             {
 
-                showBack &&
+                showBack && (
 
-                <button
+                    <button
 
-                    className="layout-back-btn"
+                        className="layout-back-btn"
 
-                    onClick={() => navigate(-1)}
+                        onClick={() => navigate(-1)}
 
-                >
+                    >
 
-                    <FaArrowLeft />
+                        <FaArrowLeft />
 
-                </button>
+                    </button>
+
+                )
 
             }
 
             {
 
-                leftAction &&
+                leftAction && (
 
-                <div className="layout-left-action">
+                    <div className="layout-left-action">
 
-                    {leftAction}
+                        {leftAction}
 
-                </div>
+                    </div>
+
+                )
 
             }
 
